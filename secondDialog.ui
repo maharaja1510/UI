@@ -75,8 +75,7 @@
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(24, 255, 20);
-background-image: url(:/BG/hmi.qrc);</string>
+    <string notr="true">background-color: rgb(85, 255, 0);</string>
    </property>
    <property name="text">
     <string>Back</string>
@@ -95,7 +94,7 @@ background-image: url(:/BG/hmi.qrc);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 0, 0);</string>
+    <string notr="true">background-color: rgb(255, 85, 127);</string>
    </property>
    <property name="text">
     <string>RUN</string>
@@ -174,51 +173,10 @@ background-image: url(:/BG/hmi.qrc);</string>
     <number>0</number>
    </property>
   </widget>
-  <widget class="QLineEdit" name="minedit">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>300</y>
-     <width>81</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="layoutDirection">
-    <enum>Qt::LeftToRight</enum>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-   <property name="placeholderText">
-    <string>MIN</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="maxedit">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>300</y>
-     <width>81</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-   <property name="placeholderText">
-    <string>MAX</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="resultlabel">
    <property name="geometry">
     <rect>
-     <x>540</x>
+     <x>390</x>
      <y>300</y>
      <width>61</width>
      <height>20</height>
@@ -237,7 +195,7 @@ background-image: url(:/BG/hmi.qrc);</string>
     <enum>QFrame::Box</enum>
    </property>
    <property name="text">
-    <string>  Result</string>
+    <string>   Done</string>
    </property>
   </widget>
   <widget class="QLabel" name="rs232complelabel">
@@ -347,9 +305,9 @@ background-image: url(:/BG/hmi.qrc);</string>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>200</x>
      <y>300</y>
-     <width>81</width>
+     <width>121</width>
      <height>21</height>
     </rect>
    </property>
@@ -360,13 +318,13 @@ background-image: url(:/BG/hmi.qrc);</string>
     </font>
    </property>
    <property name="text">
-    <string>   Range</string>
+    <string>   Range check</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>200</x>
      <y>340</y>
      <width>111</width>
      <height>21</height>
@@ -379,7 +337,7 @@ background-image: url(:/BG/hmi.qrc);</string>
     </font>
    </property>
    <property name="text">
-    <string>    Stability </string>
+    <string>   Stability </string>
    </property>
   </widget>
   <widget class="QLabel" name="label_7">
