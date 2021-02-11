@@ -34,7 +34,7 @@
     </font>
    </property>
    <property name="text">
-    <string>SPARK DNA TEST BED</string>
+    <string>SPARK DNA TEST BENCH</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
