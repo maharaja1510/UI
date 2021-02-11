@@ -249,9 +249,9 @@
    <property name="geometry">
     <rect>
      <x>360</x>
-     <y>350</y>
-     <width>131</width>
-     <height>10</height>
+     <y>340</y>
+     <width>151</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="value">
@@ -261,7 +261,7 @@
   <widget class="QLabel" name="stablecomplelabel">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>380</x>
      <y>340</y>
      <width>81</width>
      <height>21</height>
@@ -430,6 +430,26 @@
     <string>  TEST COMPLETED</string>
    </property>
   </widget>
+  <zorder>label</zorder>
+  <zorder>Save</zorder>
+  <zorder>backbutton</zorder>
+  <zorder>runbutton</zorder>
+  <zorder>rs232progressBar</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>rs485progressBar</zorder>
+  <zorder>resultlabel</zorder>
+  <zorder>rs232complelabel</zorder>
+  <zorder>rs485complelabel</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_7</zorder>
+  <zorder>serialnumber</zorder>
+  <zorder>productlineEdit</zorder>
+  <zorder>testinprogresslabel</zorder>
+  <zorder>stabilityprogressBar</zorder>
+  <zorder>stablecomplelabel</zorder>
  </widget>
  <resources>
   <include location="download.qrc"/>
