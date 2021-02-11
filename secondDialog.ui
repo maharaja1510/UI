@@ -21,7 +21,7 @@
     <rect>
      <x>160</x>
      <y>30</y>
-     <width>461</width>
+     <width>521</width>
      <height>61</height>
     </rect>
    </property>
@@ -34,7 +34,7 @@
     </font>
    </property>
    <property name="text">
-    <string>SPARK DNA TEST BED</string>
+    <string>SPARK DNA TEST BENCH</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -411,7 +411,7 @@
     <rect>
      <x>320</x>
      <y>380</y>
-     <width>211</width>
+     <width>301</width>
      <height>20</height>
     </rect>
    </property>
