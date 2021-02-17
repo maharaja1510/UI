@@ -40,7 +40,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="Save">
+  <widget class="QPushButton" name="thirdnextbutton">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -56,7 +56,7 @@
     <string notr="true">background-color: rgb(85, 255, 0);</string>
    </property>
    <property name="text">
-    <string>Save</string>
+    <string>NEXT</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -78,7 +78,7 @@
     <string notr="true">background-color: rgb(85, 255, 0);</string>
    </property>
    <property name="text">
-    <string>Back</string>
+    <string>BACK</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -431,7 +431,7 @@
    </property>
   </widget>
   <zorder>label</zorder>
-  <zorder>Save</zorder>
+  <zorder>thirdnextbutton</zorder>
   <zorder>backbutton</zorder>
   <zorder>runbutton</zorder>
   <zorder>rs232progressBar</zorder>
