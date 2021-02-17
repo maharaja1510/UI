@@ -1,3 +1,6 @@
+
+
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QTime, QTimer,QBasicTimer
 from PyQt5.uic import loadUi
@@ -22,9 +25,10 @@ class firstdialog(QDialog):
 
     def nextpage(self):
        
-        self.serialnumber=self.serialnumber.text()  #value of serial number
-        if self.serialnumber!="":                   #if not 
-            nextpage=secondDialog()
+        serialnumber1=self.serialnumber  #value of serial number
+        self.serialnumber=serialnumber1.text()
+        if self.serialnumber=='ECL':                   #if not 
+            nextpage=secondDialog(self.serialnumber)
             widget.addWidget(nextpage)
             widget.setCurrentIndex(widget.currentIndex()+1)    #open the next page  
 
@@ -42,14 +46,20 @@ class firstdialog(QDialog):
         
       
 class secondDialog(QDialog):
-    def __init__(self):
+    def __init__(self,serial_no):
         super(secondDialog,self).__init__()
         loadUi(r"C:\Users\MAHA RAJA\Desktop\Qt design\secondDialog.ui",self) #loadui
         self.backbutton.clicked.connect(self.backfunction)   #connect the back page function
-        self.initUI()      
+        self.productlineEdit.setText(serial_no)
+        self.initUI()  
+        self.thirdnextbutton.clicked.connect(self.thirdpage)
+
         
     
-
+    def thirdpage(self):
+        thirdpage=thirddialog()
+        widget.addWidget(thirdpage)
+        widget.setCurrentIndex(widget.currentIndex()+1)
        
     def backfunction(self):
    
@@ -114,8 +124,8 @@ class secondDialog(QDialog):
     def maxminvalue(self):
 
 
-        maxvalue=self.maxedit.text()   #set the text in the max box
-        minvalue=self.minedit.text()
+        maxvalue=10000   #set the text in the max box
+        minvalue=20000
         loadvalue=1220
         resvalue=self.resultlabel
         if loadvalue > int(minvalue) and int(maxvalue)>loadvalue:
@@ -142,12 +152,29 @@ class secondDialog(QDialog):
        
     
             
+class thirddialog(QDialog):
+    def __init__(self):
+        super(thirddialog,self).__init__()
+        loadUi(r"C:\Users\MAHA RAJA\Desktop\Qt design\thirddialog.ui",self) #loadui
+        self.backbutton3.clicked.connect(self.pagetwo) 
+        self.clickherebutton.clicked.connect(self.samepage) 
+        self.valuelabel1=self.valuelabel
+        
        
 
-    
-    
+    def pagetwo(self):
+   
+        backpage=firstdialog()
+        widget.addWidget(backpage)
+        widget.setCurrentIndex(widget.currentIndex()+1)   #connect the first page
+        self.valuelabel1.setText("hi")
+    def samepage(self):
+        currentpage=thirddialog()
        
-      
+        widget.setCurrentIndex(widget.currentIndex())
+        print("samepage")
+
+    
       
       
             
@@ -174,3 +201,4 @@ widget.setFixedWidth(800)
 widget.setFixedHeight(480)
 widget.show()
 app.exec_()
+
