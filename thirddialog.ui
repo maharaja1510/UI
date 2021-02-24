@@ -16,18 +16,18 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>10</y>
+     <x>-20</x>
+     <y>180</y>
      <width>521</width>
      <height>61</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Microsoft JhengHei</family>
-     <pointsize>24</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -40,8 +40,8 @@
   <widget class="QLabel" name="weightlabel">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>140</y>
+     <x>420</x>
+     <y>240</y>
      <width>100</width>
      <height>30</height>
     </rect>
@@ -100,8 +100,8 @@
   <widget class="QPushButton" name="clickherebutton">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>250</y>
+     <x>420</x>
+     <y>310</y>
      <width>71</width>
      <height>20</height>
     </rect>
@@ -113,8 +113,8 @@
   <widget class="QLabel" name="valuelabel">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>140</y>
+     <x>270</x>
+     <y>240</y>
      <width>200</width>
      <height>30</height>
     </rect>
@@ -137,8 +137,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>80</y>
+     <x>330</x>
+     <y>200</y>
      <width>311</width>
      <height>21</height>
     </rect>
@@ -156,12 +156,12 @@
     <string>Place the weight on the load cell</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="calibratelabel">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>250</y>
-     <width>181</width>
+     <x>170</x>
+     <y>310</y>
+     <width>251</width>
      <height>20</height>
     </rect>
    </property>
@@ -177,6 +177,155 @@
    </property>
    <property name="text">
     <string>To calibrate the value</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="op">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>50</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string> Device output status </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DOP1label">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>90</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DOP_01</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DOP2label">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>90</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DOP_02</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DOP3label">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>130</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DOP_03</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DOP4label">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>130</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DOP_04</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>50</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Device input  status</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DIP2label">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>90</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: lightgreen;</string>
+   </property>
+   <property name="text">
+    <string>DIP_02</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DIP3label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>130</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DIP_03</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DIP1label">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>90</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DIP_01</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clickedbutton">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>100</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>clicked</string>
    </property>
   </widget>
  </widget>
