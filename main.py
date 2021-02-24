@@ -5,7 +5,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QTime, QTimer,QBasicTimer
 from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import (QMessageBox,QWidget,QApplication,QProgressBar,QPushButton,QDialog)
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import  QIcon
 import time
 import serial
 import sys
@@ -28,7 +28,7 @@ class firstdialog(QDialog):
         serialnumber1=self.serialnumber  #value of serial number
         self.serialnumber=serialnumber1.text()
         if self.serialnumber=='ECL':                   #if not 
-            nextpage=secondDialog(self.serialnumber)
+            nextpage=secondDialog()
             widget.addWidget(nextpage)
             widget.setCurrentIndex(widget.currentIndex()+1)    #open the next page  
 
@@ -46,11 +46,13 @@ class firstdialog(QDialog):
         
       
 class secondDialog(QDialog):
-    def __init__(self,serial_no):
+    def __init__(self):
         super(secondDialog,self).__init__()
         loadUi(r"C:\Users\MAHA RAJA\Desktop\Qt design\secondDialog.ui",self) #loadui
         self.backbutton.clicked.connect(self.backfunction)   #connect the back page function
-        self.productlineEdit.setText(serial_no)
+        # a=str(serial_no)
+        # self.productlineEdit.setText(a)
+        
         self.initUI()  
         self.thirdnextbutton.clicked.connect(self.thirdpage)
 
@@ -89,7 +91,7 @@ class secondDialog(QDialog):
         self.stablecomplelabel.hide()
         self.testprogress=self.testinprogresslabel
         self.testprogress.hide()
-
+  
 
         self.runbutton.clicked.connect(self.onButtonClick)
 
@@ -119,21 +121,9 @@ class secondDialog(QDialog):
                 self.labelcompletestatus485.setStyleSheet("background-color: lightgreen") 
             else:
                 self.labelcompletestatus485.setStyleSheet("background-color: red")
-        self.maxminvalue()
+            self.maxminvalue()
 
     def maxminvalue(self):
-
-
-        maxvalue=10000   #set the text in the max box
-        minvalue=20000
-        loadvalue=1220
-        resvalue=self.resultlabel
-        if loadvalue > int(minvalue) and int(maxvalue)>loadvalue:
-           resvalue.setStyleSheet("background-color: lightgreen") 
-        else:
-           resvalue.setStyleSheet("background-color: red")
-
- 
         stable=0
         
         while stable < Time_limit:
@@ -150,7 +140,18 @@ class secondDialog(QDialog):
         
         self.testprogress.show()   #show the text completed text
        
+        
+        self.runbutton.clicked.connect(self.onButtonrecheck)
     
+    def onButtonrecheck(self):
+       
+        currentpage=secondDialog()
+        widget.addWidget(currentpage)
+        widget.setCurrentIndex(widget.currentIndex())
+       
+        
+        # self.productlineEdit.setText(a)
+        
             
 class thirddialog(QDialog):
     def __init__(self):
@@ -159,6 +160,27 @@ class thirddialog(QDialog):
         self.backbutton3.clicked.connect(self.pagetwo) 
         self.clickherebutton.clicked.connect(self.samepage) 
         self.valuelabel1=self.valuelabel
+        self.DIPlabel1=self.DIP1label
+        self.DIPlabel2=self.DIP2label
+        self.DIPlabel3=self.DIP3label
+        self.DOPlabel1=self.DOP1label
+        self.DOPlabel2=self.DOP2label
+        self.DOPlabel3=self.DOP3label
+        self.DOPlabel4=self.DOP4label
+        self.calibratelabel1=self.calibratelabel
+        self.clickedbutton1=self.clickedbutton
+        self.inputdevicestatus()
+        
+      
+
+        self.clickedbutton.clicked.connect(self.outputdevicestatus)
+    def outputdevicestatus(self):
+       
+        self.DOPlabel1.setStyleSheet("background-color: lightgreen")
+        self.DOPlabel2.setStyleSheet("background-color: lightgreen")  
+        self.DOPlabel3.setStyleSheet("background-color: lightgreen") 
+        self.DOPlabel4.setStyleSheet("background-color: lightgreen")
+       
         
        
 
@@ -173,8 +195,16 @@ class thirddialog(QDialog):
        
         widget.setCurrentIndex(widget.currentIndex())
         print("samepage")
-
-    
+       
+    def inputdevicestatus(self):
+        self.DIPlabel1.setStyleSheet("background-color: lightgreen") 
+        self.DIPlabel2.setStyleSheet("background-color: lightgreen") 
+        self.DIPlabel3.setStyleSheet("background-color: lightgreen") 
+        a="calibrated value"
+        self.calibratelabel1.setText(a + " hi")   
+        
+     
+   
       
       
             
