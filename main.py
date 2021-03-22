@@ -28,7 +28,7 @@ class firstdialog(QDialog):
         serialnumber1=self.serialnumber  #value of serial number
         self.serialnumber=serialnumber1.text()
         if self.serialnumber=='ECL':                   #if not 
-            nextpage=secondDialog()
+            nextpage=secondDialog(self.serialnumber)
             widget.addWidget(nextpage)
             widget.setCurrentIndex(widget.currentIndex()+1)    #open the next page  
 
@@ -46,12 +46,12 @@ class firstdialog(QDialog):
         
       
 class secondDialog(QDialog):
-    def __init__(self):
+    def __init__(self,serial_no):
         super(secondDialog,self).__init__()
         loadUi(r"C:\Users\MAHA RAJA\Desktop\Qt design\secondDialog.ui",self) #loadui
         self.backbutton.clicked.connect(self.backfunction)   #connect the back page function
-        # a=str(serial_no)
-        # self.productlineEdit.setText(a)
+        a=str(serial_no)
+        self.productlineEdit.setText(a)
         
         self.initUI()  
         self.thirdnextbutton.clicked.connect(self.thirdpage)
@@ -163,23 +163,15 @@ class thirddialog(QDialog):
         self.DIPlabel1=self.DIP1label
         self.DIPlabel2=self.DIP2label
         self.DIPlabel3=self.DIP3label
-        self.DOPlabel1=self.DOP1label
-        self.DOPlabel2=self.DOP2label
-        self.DOPlabel3=self.DOP3label
-        self.DOPlabel4=self.DOP4label
+        self.tarebutton1=self.tarebutton    #tare button obj
         self.calibratelabel1=self.calibratelabel
-        self.clickedbutton1=self.clickedbutton
+        
         self.inputdevicestatus()
         
       
 
-        self.clickedbutton.clicked.connect(self.outputdevicestatus)
-    def outputdevicestatus(self):
        
-        self.DOPlabel1.setStyleSheet("background-color: lightgreen")
-        self.DOPlabel2.setStyleSheet("background-color: lightgreen")  
-        self.DOPlabel3.setStyleSheet("background-color: lightgreen") 
-        self.DOPlabel4.setStyleSheet("background-color: lightgreen")
+   
        
         
        
@@ -197,9 +189,9 @@ class thirddialog(QDialog):
         print("samepage")
        
     def inputdevicestatus(self):
-        self.DIPlabel1.setStyleSheet("background-color: lightgreen") 
-        self.DIPlabel2.setStyleSheet("background-color: lightgreen") 
-        self.DIPlabel3.setStyleSheet("background-color: lightgreen") 
+        self.DIPlabel1.setStyleSheet("background-color: none") 
+        self.DIPlabel2.setStyleSheet("background-color: none") 
+        self.DIPlabel3.setStyleSheet("background-color: NONE") 
         a="calibrated value"
         self.calibratelabel1.setText(a + " hi")   
         
