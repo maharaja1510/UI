@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -100,8 +103,8 @@
   <widget class="QPushButton" name="clickherebutton">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>310</y>
+     <x>420</x>
+     <y>340</y>
      <width>71</width>
      <height>20</height>
     </rect>
@@ -160,7 +163,7 @@
    <property name="geometry">
     <rect>
      <x>160</x>
-     <y>310</y>
+     <y>340</y>
      <width>251</width>
      <height>20</height>
     </rect>
@@ -182,8 +185,8 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>80</y>
+     <x>340</x>
+     <y>60</y>
      <width>161</width>
      <height>16</height>
     </rect>
@@ -203,8 +206,8 @@
   <widget class="QLabel" name="DIP2label">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>120</y>
+     <x>380</x>
+     <y>110</y>
      <width>60</width>
      <height>20</height>
     </rect>
@@ -219,8 +222,8 @@
   <widget class="QLabel" name="DIP3label">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>120</y>
+     <x>480</x>
+     <y>110</y>
      <width>60</width>
      <height>20</height>
     </rect>
@@ -232,8 +235,8 @@
   <widget class="QLabel" name="DIP1label">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>120</y>
+     <x>290</x>
+     <y>110</y>
      <width>60</width>
      <height>20</height>
     </rect>
@@ -253,6 +256,46 @@
    </property>
    <property name="text">
     <string>TARE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="valuelabel_2">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>280</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 0px solid black;</string>
+   </property>
+   <property name="text">
+    <string>Count :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="countlabel">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>280</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid black;</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>
